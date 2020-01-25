@@ -13,7 +13,7 @@ cursor.execute(sql_select)
 rows = cursor.fetchall()
 
 for row in rows:
-    user = row[0]
+    user = row[0].lower()
     email = row[1]
     name = row[2]
     f = open(user+".yaml", "w")
